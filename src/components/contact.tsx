@@ -1,14 +1,17 @@
 "use client";
 
 import { useSectionInView } from "@/lib/hooks";
-import React from "react";
+import { useState } from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { sendEmail } from "@/actions/sendEmail";
 import SubmitBtn from "./submit-btn";
+import * as Toast from "@radix-ui/react-toast";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
+  const [open, setOpen] = useState(false);
+  const [status, setStatus] = useState("");
 
   return (
     <motion.section
@@ -24,8 +27,8 @@ export default function Contact() {
       <SectionHeading>Contact me</SectionHeading>
       <p className="text-gray-700 -mt-6 dark:text-white/80">
         Please contact me directly at{" "}
-        <a href="mailto: example@gmail.com" className="underline">
-          example@gmail.com
+        <a href="mailto: o.kvasnytskyi@gmail.com" className="underline">
+          o.kvasnytskyi@gmail.com
         </a>{" "}
         or through this from.
       </p>
@@ -34,11 +37,12 @@ export default function Contact() {
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
           if (error) {
-            alert(error);
+            setStatus(error);
+            setOpen(true);
             return;
           }
-
-          alert("Email sent successfully!");
+          setStatus("Email sent successfully!");
+          setOpen(true);
         }}
       >
         <input
@@ -56,7 +60,21 @@ export default function Contact() {
           required
           maxLength={500}
         ></textarea>
-        <SubmitBtn />
+        <Toast.Provider swipeDirection="right">
+          <SubmitBtn />
+          <Toast.Root
+            className="bg-white rounded-md shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] p-[15px] grid [grid-template-areas:_'title_action'_'description_action'] grid-cols-[auto_max-content] gap-x-[15px] items-center data-[state=open]:animate-slideIn data-[state=closed]:animate-hide data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=cancel]:translate-x-0 data-[swipe=cancel]:transition-[transform_200ms_ease-out] data-[swipe=end]:animate-swipeOut"
+            open={open}
+            onOpenChange={setOpen}
+            duration={4000}
+          >
+            <Toast.Title className="[grid-area:_title] mb-[5px] font-medium text-slate12 text-[15px]">
+              {status}
+            </Toast.Title>
+          </Toast.Root>
+          <Toast.Viewport className="[--viewport-padding:_25px] fixed bottom-0 left-1/2 -translate-x-1/2 flex flex-col p-[var(--viewport-padding)] gap-[10px] w-[390px] max-w-[100vw] m-0 list-none z-[2147483647] outline-none" />
+        </Toast.Provider>
+        {/* <SubmitBtn /> */}
       </form>
     </motion.section>
   );

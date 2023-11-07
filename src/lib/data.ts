@@ -32,72 +32,82 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Fron-End Developer",
+    location: "Kiev, UA",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "I'm now a front-end developer working in my own Pet Projects. My stack includes React, Next.js, TypeScript, Tailwind, and MongoDB. I'm open to full-time opportunities.",
+    icon: React.createElement(FaReact),
+    date: "05.2023 - present",
+  },
+  {
+    title: "Senior Trade Marketing Manager",
+    location: "JSC «Farmak»",
+    description: `I was working 10-years in the pharmacy market,
+where I developed essential soft skills like attention to detail, analytical thinking, and effective
+communication that could be applicable to my IT-specialist's professional journey.
+`,
+    icon: React.createElement(CgWorkAlt),
+    date: "2018 - 2022",
+  },
+  {
+    title: "Medical Sales Representative",
+    location: "JSC «Farmak»",
+    icon: React.createElement(CgWorkAlt),
+    date: "2012 - 2018",
+  },
+  {
+    title: "Pharmacy",
+    location: "Ternopil State Medical University",
     icon: React.createElement(LuGraduationCap),
     // icon: <LuGraduationCap/>,
-    date: "2019",
+    date: "2002 - 2010",
   },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
-  },
-  {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
-  },
-] as const;
+];
 
 export const projectsData = [
   {
-    title: "CorpComment",
-    description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: "/corpcomment.png",
+    title: "Berry-Bar",
+    description: "In progress..",
+    tags: ["React", "TypeScript", "Node.js", "Express", "MongoDB", "SCSS"],
+    imageUrl: "/Berry-Bar.png",
+    Url: "https://github.com/OlegKvasn/Berry_Bar_app_MERN/tree/main",
   },
   {
-    title: "rmtDev",
-    description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: "/rmtdev.png",
+    title: "Pets-Paw",
+    description: "Project created for using all features of The Cat API.",
+    tags: ["React", "Next.js", "TypeScript", "CSS Modules"],
+    imageUrl: "/Pets-Paw.png",
+    Url: "https://pets-paw-oleg.vercel.app/",
   },
   {
-    title: "Word Analytics",
-    description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: "/wordanalytics.png",
+    title: "Muebles-Alonso",
+    description: "A web app of spanish furniture shop.",
+    tags: ["React", "Next.js", "TypeScript", "CSS Modules", "Contentful"],
+    imageUrl: "/Muebles-Alonso.png",
+    Url: "https://muebles-alonso-es.vercel.app/",
   },
 ] as const;
 
 export const skillsData = [
   "HTML",
   "CSS",
+  "SCSS",
+  "Tailwind",
   "JavaScript",
   "TypeScript",
   "React",
   "Next.js",
   "Node.js",
-  "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
   "Express",
-  "PostgreSQL",
+  "Git",
+  // "Prisma",
+  "MongoDB",
+  // "Redux",
+  // "GraphQL",
+  // "Apollo",
+
+  // "PostgreSQL",
   "Framer Motion",
+  "Radix UI",
+  "Contentful",
 ] as const;

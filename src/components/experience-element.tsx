@@ -44,9 +44,11 @@ export default function ExperienceElement({
       >
         <h3 className="font-semibold capitalize">{element.title}</h3>
         <p className="font-normal !mt-0">{element.location}</p>
-        <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
-          {element.description}
-        </p>
+        {element.description ? (
+          <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
+            {element.description}
+          </p>
+        ) : null}
       </VerticalTimelineElement>
     </div>
   );
