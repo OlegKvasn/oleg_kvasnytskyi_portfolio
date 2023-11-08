@@ -20,9 +20,9 @@ export default function About() {
       <p className="mb-3">
         I spent more than a decade in the{" "}
         <span className="font-medium">pharmaceutical industry</span>. Leveraging
-        my strong analytical abilities and meticulous attention to detail, I've
-        decided to make a career transition into the IT sector – a field that
-        has captivated me for quite some time.{" "}
+        my solid analytical abilities and meticulous attention to detail, I've
+        decided to make a career transition into the IT sector. This field has
+        captivated me for quite some time.{" "}
         <span className="italic">My favorite part of programming</span> is the
         problem-solving aspect. I <span className="underline">love</span> the
         feeling of finally figuring out a solution to a problem. <br />

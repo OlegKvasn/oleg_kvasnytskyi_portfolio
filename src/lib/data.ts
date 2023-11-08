@@ -33,18 +33,18 @@ export const links = [
 export const experiencesData = [
   {
     title: "Fron-End Developer",
-    location: "Kiev, UA",
+    location: "Kyiv, UA",
     description:
-      "I'm now a front-end developer working in my own Pet Projects. My stack includes React, Next.js, TypeScript, Tailwind, and MongoDB. I'm open to full-time opportunities.",
+      "I'm now a front-end developer working on my own Pet Projects. My stack includes React, Next.js, TypeScript, Tailwind, and MongoDB. I'm open to full-time opportunities.",
     icon: React.createElement(FaReact),
     date: "05.2023 - present",
   },
   {
     title: "Senior Trade Marketing Manager",
     location: "JSC «Farmak»",
-    description: `I was working 10-years in the pharmacy market,
-where I developed essential soft skills like attention to detail, analytical thinking, and effective
-communication that could be applicable to my IT-specialist's professional journey.
+    description: `I worked for ten years in the pharmacy market,
+developing essential soft skills like attention to detail, analytical thinking, and effective
+communication that could apply to my IT-specialist's professional journey.
 `,
     icon: React.createElement(CgWorkAlt),
     date: "2018 - 2022",

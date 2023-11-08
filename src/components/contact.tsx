@@ -30,7 +30,7 @@ export default function Contact() {
         <a href="mailto: o.kvasnytskyi@gmail.com" className="underline">
           o.kvasnytskyi@gmail.com
         </a>{" "}
-        or through this from.
+        or through this form.
       </p>
       <form
         className="mt-10 flex flex-col dark:text-black"
