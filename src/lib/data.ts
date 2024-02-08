@@ -67,8 +67,17 @@ communication that could apply to my IT-specialist's professional journey.
 export const projectsData = [
   {
     title: "Berry-Bar",
-    description: "In progress..",
-    tags: ["React", "TypeScript", "Node.js", "Express", "MongoDB", "SCSS"],
+    description: "A fullstack app for restaurant (In progress)",
+    tags: [
+      "MongoDB",
+      "Express",
+      "React",
+      "Node.js",
+      "TypeScript",
+      "Material UI",
+      "Redux Toolkit",
+      "SCSS",
+    ],
     imageUrl: "/Berry-Bar.png",
     Url: "https://github.com/OlegKvasn/Berry_Bar_app_MERN/tree/main",
   },
